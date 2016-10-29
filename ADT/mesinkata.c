@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 #include <string.h>
 #include "mesinkata.h"
 
@@ -102,8 +101,6 @@ void SalinKata(char text[100]) {
 			CKata.Length = i+1;
 		}
 		else CKata.Length = NMax;
-		
-		CKata.TabKata[i+1] = NULL;
 	}
 	
 }
