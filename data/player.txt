@@ -1,32 +1,7 @@
-!!! EXP -> EXP YG DIBUTUHIN buat naik level
+-1-15-5-3-5
+-2-20-7-5-15
+-3-30-10-6-30
+-4-45-12-9-45
+-5-65-15-12-70.
 
-LEVEL 1
-hp : 15
-str : 5
-def : 3
-exp : 5
-
-LEVEL 2
-hp : 20
-str : 7
-def : 5
-exp : 15
-
-LEVEL 3
-hp : 30
-str : 10
-def : 6
-exp : 30
-
-LEVEL 4
-hp : 45
-str : 12
-def : 9
-exp : 45
-
-LEVEL 5
-hp : 65
-str : 15
-def : 12
-exp : 70
-
+-Level-Hp-Str-Def-EXP

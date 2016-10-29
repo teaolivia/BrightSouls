@@ -1,62 +1,12 @@
-POOP
-level : 1
-hp : 10
-str : 2
-def : 4
-exp : 5
+*POOP-1-10-2-4-5*
+PEE-1-10-4-2-5*
+ISWARA-2-17-6-4-7*
+MBUL-2-18-5-6-8*
+CABUL-3-25-10-6-10*
+ADIT-3-25-7-9-11*
+GUNGS-4-35-13-8-15*
+DUT-4-33-10-10-14*
+HERCULES-5-70-14-11-999.
 
-PEE
-level : 1
-hp : 10
-str : 4
-def : 2
-exp : 5
+*Nama Monster-Level-Hp-Str-Def-Exp
 
-ISWARA
-level : 2
-hp : 17
-str : 6
-def : 4
-exp : 7
-
-MBUL
-level : 2
-hp : 18
-str : 5
-def : 6
-exp : 8
-
-CABUL
-level : 3
-hp : 25
-str : 10
-def : 6
-exp : 10
-
-ADIT
-level : 3
-hp : 25
-str : 7
-def : 9
-exp : 11
-
-GUNGS
-level : 4
-hp : 35
-str : 13
-def : 8
-exp : 15
-
-DUT
-level : 4
-hp : 33
-str : 10
-def : 10
-exp : 14
-
-HERCULES
-level : 5
-hp : 70
-str : 14
-def : 11
-exp : 999
