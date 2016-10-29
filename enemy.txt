@@ -1,0 +1,62 @@
+POOP
+level : 1
+hp : 10
+str : 2
+def : 4
+exp : 5
+
+PEE
+level : 1
+hp : 10
+str : 4
+def : 2
+exp : 5
+
+ISWARA
+level : 2
+hp : 17
+str : 6
+def : 4
+exp : 7
+
+MBUL
+level : 2
+hp : 18
+str : 5
+def : 6
+exp : 8
+
+CABUL
+level : 3
+hp : 25
+str : 10
+def : 6
+exp : 10
+
+ADIT
+level : 3
+hp : 25
+str : 7
+def : 9
+exp : 11
+
+GUNGS
+level : 4
+hp : 35
+str : 13
+def : 8
+exp : 15
+
+DUT
+level : 4
+hp : 33
+str : 10
+def : 10
+exp : 14
+
+HERCULES
+level : 5
+hp : 70
+str : 14
+def : 11
+exp : 999
