@@ -1,7 +1,7 @@
 /* File: mesinkar.c */
 /* Implementasi Mesin Karakter */
 
-#include "/ADT/header/mesinkar.h"
+#include "mesinkar.h"
 #include <stdio.h>
 
 static FILE *pita;
