@@ -11,8 +11,8 @@
 #include <stdlib.h>
 
 /* Modul lain yang digunakan */
-#include "listrekursif.h"
-#include "mesinkar.h"
+#include "/ADT/header/listrekursif.h"
+#include "/ADT/header/mesinkar.h"
 
 #define Nil NULL
 #define boolean unsigned char

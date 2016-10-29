@@ -2,8 +2,8 @@
 /* Implementasi Mesin Kata */
 
 #include <stdio.h>
-#include "boolean.h"
-#include "mesinkata.h"
+#include "/ADT/header/boolean.h"
+#include "/ADT/header/mesinkata.h"
 
 boolean EndKata;
 Kata CKata;

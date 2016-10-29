@@ -5,8 +5,8 @@
 // Deskripsi : membuat body dr matriks
 
 #include <stdio.h>
-#include "boolean.h"
-#include "matriks.h"
+#include "/ADT/header/boolean.h"
+#include "/ADT/header/matriks.h"
 #include <math.h>
 
 /* ********** DEFINISI PROTOTIPE PRIMITIF ********** */              
