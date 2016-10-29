@@ -4,11 +4,11 @@
 #include "mesinkar.h"
 #include <stdio.h>
 
+static FILE *pita;
+static int retval;
+
 char CC;
 boolean EOP;
-
-static FILE * pita;
-static int retval;
 
 void START(char text[100]) {
 /* Mesin siap dioperasikan. Pita disiapkan untuk dibaca.
