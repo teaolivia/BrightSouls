@@ -70,5 +70,4 @@ void loadStatHero(hero *H, int *jum,char text[100]) {
 		(*jum) = (*jum) + 1;
 		i++;
 	}
-}
-
+}s
