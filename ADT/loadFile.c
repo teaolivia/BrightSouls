@@ -4,6 +4,7 @@ void loadEnemy(monster *M, int *jum,char text[100]) {
 	STARTKATA(text);
 	int i = 1;
 	int j, k;
+	int temp;
 	k = 0;
 	(*jum) = 0;
 	while (!EndKata) {				
@@ -11,7 +12,7 @@ void loadEnemy(monster *M, int *jum,char text[100]) {
 			for (k = 0; k < CKata.Length; k++) {
 				(*M).Mon[i].name[k] = CKata.TabKata[k];
 			}
-			(*M).Mon[i].name[k] = NULL;
+			 (*M).Mon[i].name[k] = NULL;
 			(*jum) = (*jum) + 1;	
 			ADVKATA(text);
 		} else {
@@ -32,6 +33,9 @@ void loadEnemy(monster *M, int *jum,char text[100]) {
 				} else {
 					(*M).Mon[i].exp = CKata.angka;
 					j++;
+					if (CKata.angka == 999) {
+						(*M).boss = (*M).Mon[i];
+					}
 				}
 				ADVKATA(text);
 			}
@@ -70,4 +74,5 @@ void loadStatHero(hero *H, int *jum,char text[100]) {
 		(*jum) = (*jum) + 1;
 		i++;
 	}
-}s
+}
+

@@ -17,6 +17,7 @@ typedef struct {
 
 typedef struct {
 	statMonster Mon[10];
+	statMonster boss;
 } monster;
 
 typedef struct {
@@ -30,12 +31,14 @@ typedef struct {
 typedef struct {
 	char name[100];
 	statHero status[10];
-} hero;
+} hero, currhero;
 
 //char text[100] = nama file txt yang bakal lu load
 //int jum = jumlah monster / level hero yang ada
 void loadEnemy(monster *M, int *jum,char text[100]);
 
 void loadStatHero(hero *H, int *jum,char text[100]);
+
+
 
 #endif
