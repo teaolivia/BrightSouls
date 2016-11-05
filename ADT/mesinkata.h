@@ -9,21 +9,19 @@
 
 #define NMax 50
 #define BLANK ' '
-#define STRIP '-'
-#define BINTANG '*'
-
 
 typedef struct {
 	char TabKata[NMax+1]; /* container penyimpan kata, indeks yang dipakai [1..NMax] */
-    int angka;
     int Length;
-    char tanda;
+    int angka; // ini sama kayak tabkata, cuma bedanya kalo tabkata simpen string, kalo angka simpen integer
 } Kata;
 
 /* State Mesin Kata */
-extern boolean kataPertama;
 extern boolean EndKata;
 extern Kata CKata;
+
+boolean IsAngka(char CC);
+//Kalau CC = 1,2,3..,9 bakal ngasilin true
 
 void IgnoreBlank();
 /* Mengabaikan satu atau beberapa BLANK

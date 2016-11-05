@@ -1,28 +1,55 @@
 #include <stdio.h>
-#include <string.h>
 #include "mesinkata.h"
 
 /* State Mesin Kata */
-boolean kataPertama;
 boolean EndKata;
 Kata CKata;
 
+boolean IsAngka(char CC) {
+	if (CC == '0') {
+		return true;
+	} else if (CC == '1') {
+		return true;
+	} else if (CC == '2') {
+		return true;
+	} else if (CC == '3') {
+		return true;
+	} else if (CC == '4') {
+		return true;
+	} else if (CC == '5') {
+		return true;
+	} else if (CC == '6') {
+		return true;
+	} else if (CC == '7') {
+		return true;
+	} else if (CC == '8') {
+		return true;
+	} else if (CC == '9') {
+		return true;
+	} else {
+		return false;
+	}      
+}
+
+/**********************
+IgnoreBlank() nya ada gua ganti jadi ada skip enter, selama ini sih gua coba punya gua ama kevin ga ada masalah
+kalo misalkan ada masalah jadi gabisa kabarin gua tar gua benerin
+
+**********************/
 void IgnoreBlank() {
 /* Mengabaikan satu atau beberapa BLANK
    I.S. : CC sembarang 
    F.S. : CC ? BLANK atau CC = MARK */
-	while ((CC == BLANK) && (CC != MARK)) {
+	while (((CC == BLANK) && (CC != MARK)) || ((CC == 10) && (CC != MARK))) {
 		ADV();
-	}	
+	}
 }
-
 void STARTKATA(char text[100]) {
 /* I.S. : CC sembarang 
    F.S. : EndKata = true, dan CC = MARK; 
           atau EndKata = false, CKata adalah kata yang sudah diakuisisi,
           CC karakter pertama sesudah karakter terakhir kata */
 	START(text);
-	kataPertama = true;
 	IgnoreBlank();
 	if (CC != MARK) {
 		SalinKata(text);
@@ -53,55 +80,24 @@ void SalinKata(char text[100]) {
           CC = BLANK atau CC = MARK; 
           CC adalah karakter sesudah karakter terakhir yang diakuisisi.
           Jika panjang kata melebihi NMax, maka sisa kata "dipotong" */
-	if ((strcmp(text,"enemy.txt") == 0) ||(strcmp(text,"player.txt") == 0)) {
-		int i;
-		i = 0;
-		int temp = 0;
-		CKata.Length = 0;
-		if (CC == STRIP) {
-			CKata.tanda = CC;
-			ADV();
-			CKata.angka = 0;
-			while ((i <= NMax) && (CC != STRIP) && (CC != BINTANG) && (CC != MARK)) {
-				if (CC != 10) {
-					temp = CC - '0';
-					CKata.angka = CKata.angka * 10 + temp;
-					ADV();
-					i++;
-				} else {
-					ADV();
-				}
-				
+	int i, temp;
+	i = 0;
+	CKata.Length = 0;
+	IgnoreBlank();
+	if (IsAngka(CC)) {
+		CKata.angka = 0;
+		while ((i <= NMax) && (CC != BLANK) && (CC != 10) && (CC != MARK)) {
+				temp = CC - '0';
+				CKata.angka = CKata.angka * 10 + temp;
+				ADV();
+				i++;	
 			}
-		} else if (CC == BINTANG) {
-			CKata.tanda = CC;
-			ADV();
-			while ((i <= NMax) && (CC != STRIP) && (CC != BINTANG) && (CC != MARK)) {
-				if (CC != 10) {
-					CKata.TabKata[i] = CC;
-					CKata.Length++;
-					ADV();
-					i++;
-				} else {
-					ADV();
-				}
-			}		
-		}	
 	} else {
-		int i;
-	    i = 0;
-	    do{
-			CKata.TabKata[i] = CC;
-			ADV();
-			if((CC != MARK) && (CC != BLANK)){
+		while ((i <= NMax) && (CC != BLANK) && (CC != 10) && (CC != MARK)) {	
+				CKata.TabKata[i] = CC;
+				CKata.Length++;
+				ADV();
 				i++;
-			}
-		} while ((CC != MARK) && (CC != BLANK));
-		if (i<=NMax){
-			CKata.Length = i+1;
 		}
-		else CKata.Length = NMax;
 	}
-	
 }
-
