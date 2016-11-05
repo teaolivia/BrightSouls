@@ -2,19 +2,22 @@
 
 void loadEnemy(monster *M, int *jum,char text[100]) {
 	STARTKATA(text);
+	
 	int i = 1;
 	int j, k;
 	int temp;
+	boolean pemindah = true;
 	k = 0;
 	(*jum) = 0;
-	while (!EndKata) {				
-		if (CKata.tanda == BINTANG) {	
+	while (!EndKata) {	
+		if (pemindah) {		
 			for (k = 0; k < CKata.Length; k++) {
 				(*M).Mon[i].name[k] = CKata.TabKata[k];
 			}
-			 (*M).Mon[i].name[k] = NULL;
+			 (*M).Mon[i].name[k] = '\0';
 			(*jum) = (*jum) + 1;	
 			ADVKATA(text);
+			pemindah = false;
 		} else {
 			j = 1;
 			while (j <= 5) {
@@ -39,6 +42,7 @@ void loadEnemy(monster *M, int *jum,char text[100]) {
 				}
 				ADVKATA(text);
 			}
+			pemindah = true;
 			i++;
 		}
 	}
