@@ -80,3 +80,34 @@ void loadStatHero(hero *H, int *jum,char text[100]) {
 	}
 }
 
+void loadBattle(movement *M, char text[100])
+{	/* KAMUS */
+	int i, j, k;
+	/* ALGORITMA */
+	i=0;
+	STARTKATA(text);
+	while(!EndKata)
+	{	if (CKata.TabKata[0]=='*')
+		{	ADVKATA(text);
+			CreateEmptyArray(&((*M).mov[i].TabMove));
+			for (k = 0; k < CKata.Length; k++) {
+				(*M).mov[i].name[k] = CKata.TabKata[k];
+			}
+			 (*M).mov[i].name[k] = '\0';
+			 ADVKATA(text);
+			 j=0;
+			 CreateQueue(&(ElmtArray(((*M).mov[i].TabMove),j)));
+			 while ((CKata.TabKata[0]!='/') && (!EndKata))
+			{	if (CKata.TabKata[0]!='-')
+					AddQueue(&(ElmtArray(((*M).mov[i].TabMove),j)),CKata.TabKata[0]);
+				else
+				{	j++;
+					CreateQueue(&(ElmtArray(((*M).mov[i].TabMove),j)));
+				}
+				ADVKATA(text);
+			}
+			i++;
+		}
+		ADVKATA(text);
+	}
+}

@@ -1,7 +1,3 @@
-/* NIM : 13515064 */
-/* Nama : Tasya */
-/* Tanggal : 5 September 2016 */
-/* Topik Praktikum : Pra-Praktikum 03 */
 /* Deskripsi : array.c */ 
 
 /* MODUL TABEL INTEGER */
@@ -46,14 +42,14 @@ boolean IsEmptyArray (Tab T)
 
 /* ********** SEARCHING ********** */
 /* ***  Perhatian : Tabel boleh kosong!! *** */
-
-IdxType SearchArray (Tab T, ElTypeArray X)
+/*
+IdxTypeArray SearchArray (Tab T, ElTypeArray X) */
 /* Search apakah ada elemen tabel T yang bernilai X */
 /* Jika ada, menghasilkan indeks i terkecil, dengan elemen ke-i = X */
 /* Jika tidak ada, mengirimkan IdxUndef */
 /* Menghasilkan indeks tak terdefinisi (IdxUndef) jika tabel T kosong */
 /* Memakai skema search DENGAN boolean Found */
-{	IdxType i;
+/* {	IdxType i;
 	boolean found;
 	i = IdxMinArray;
 	found = false;
@@ -76,4 +72,4 @@ IdxType SearchArray (Tab T, ElTypeArray X)
 	else {
 		return IdxUndef;
 	}
-}
+} */

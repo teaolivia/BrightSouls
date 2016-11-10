@@ -2,6 +2,7 @@
 #include <string.h>
 #include "mesinkar.h"
 #include "mesinkata.h"
+#include "array.h"
 
 #ifndef __LOADFILE_H_
 #define __LOADFILE_H_
@@ -33,12 +34,21 @@ typedef struct {
 	statHero status[10];
 } hero, currhero;
 
+typedef struct {
+	char name[10];
+	Tab TabMove;
+} statMovement;
+
+typedef struct {
+	statMovement mov[10];
+} movement;
+
 //char text[100] = nama file txt yang bakal lu load
 //int jum = jumlah monster / level hero yang ada
 void loadEnemy(monster *M, int *jum,char text[100]);
 
 void loadStatHero(hero *H, int *jum,char text[100]);
 
-
+void loadBattle(movement *M, char text[100]);
 
 #endif

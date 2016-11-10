@@ -1,4 +1,4 @@
-POOP *
+* POOP
 A B A F -
 A F A B -
 A A A A -
@@ -9,7 +9,7 @@ B A B F -
 F F F A -
 F B F A -
 F A F A /
-PEE *
+* PEE
 A A A A -
 A B A A -
 A A F A -
@@ -20,7 +20,7 @@ B F A A -
 F F F F -
 F A B A -
 F F A A /
-ISWARA *
+* ISWARA
 A A F B -
 A F A B -
 A B B F -
@@ -31,7 +31,7 @@ B A A F -
 F A F B -
 F F B A -
 F A A B /
-MBUL *
+* MBUL
 A B B F -
 A F B F -
 A B F F -
@@ -42,7 +42,7 @@ B F A A -
 F A A B -
 F B A B -
 F A A A /
-CABUL *
+* CABUL
 A B B A -
 A F A F -
 A A F B -
@@ -53,7 +53,7 @@ F F F F -
 F A F B -
 F F A A -
 F B A F /
-ADIT *
+* ADIT
 A A B F -
 A B F A -
 A B A F -
@@ -64,7 +64,7 @@ B A F B -
 F A F B -
 F F B A -
 F A B F /
-GUNGS *
+* GUNGS
 A A B A -
 A A F B -
 A B F A -
@@ -75,7 +75,7 @@ B A B F -
 F A B F -
 F F B A -
 F A F B /
-DUT *
+* DUT
 A B F A -
 A A F B -
 A F A B -
@@ -86,7 +86,7 @@ B F A B -
 F F A B -
 F B A F -
 F B F B /
-HERCULES *
+* HERCULES
 A A A A -
 A B A F -
 A A F B -

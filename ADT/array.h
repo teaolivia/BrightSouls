@@ -11,7 +11,7 @@
 #include "queuelist.h"
 
 /*  Kamus Umum */
-#define IdxMaxArray 100
+#define IdxMaxArray 20
 /* Indeks maksimum array, sekaligus ukuran maksimum array dalam C */
 #define IdxMinArray 1
 /* Indeks minimum array */
@@ -22,7 +22,7 @@
 typedef int IdxTypeArray;  /* type indeks */
 typedef Queue ElTypeArray;   /* type elemen tabel */
 typedef struct { 
-	ElType TI[IdxMax+1]; /* memori tempat penyimpan elemen (container) */
+	ElTypeArray TI[IdxMaxArray+1]; /* memori tempat penyimpan elemen (container) */
 	int Neff; /* >=0, banyaknya elemen efektif */
 } Tab;
 /* Indeks yang digunakan [IdxMin..IdxMax] */
