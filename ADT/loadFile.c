@@ -106,6 +106,7 @@ void loadBattle(movement *M, char text[100])
 				}
 				ADVKATA(text);
 			}
+			NeffArray((*M).mov[i].TabMove)=j;
 			i++;
 		}
 		ADVKATA(text);
