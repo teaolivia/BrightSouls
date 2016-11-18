@@ -23,7 +23,7 @@ typedef int IdxTypeArray;  /* type indeks */
 typedef Queue ElTypeArray;   /* type elemen tabel */
 typedef struct { 
 	ElTypeArray TI[IdxMaxArray+1]; /* memori tempat penyimpan elemen (container) */
-	int Neff; /* >=0, banyaknya elemen efektif */
+	int NeffArray; /* >=0, banyaknya elemen efektif */
 } Tab;
 /* Indeks yang digunakan [IdxMin..IdxMax] */
 /* Jika T adalah TabInt, cara deklarasi dan akses: */
@@ -38,7 +38,7 @@ typedef struct {
   Definisi elemen terakhir yang terdefinisi: T.TI[i] dengan i=T.Neff */
   
 /* ********** SELEKTOR ********** */
-#define NeffArray(T)   (T).Neff
+#define NeffArray(T)   (T).NeffArray
 #define Tab(T)     (T).TI
 #define ElmtArray(T,i) (T).TI[(i)]
 
