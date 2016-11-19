@@ -1,4 +1,4 @@
-#include "loadfile.h"
+#include "loadFile.h"
 
 void loadEnemy(monster *M, int *jum,char text[100]) {
 	STARTKATA(text);
