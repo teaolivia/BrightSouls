@@ -285,7 +285,7 @@ void AddDaunTerkiri (BinTree *P, infotype X) {
 		AddDaunTerkiri(&(Left(*P)),X);
 }
 
-w {
+void AddDaun (BinTree *P, infotype X, infotype Y, boolean Kiri) {
 /* I.S. P tidak kosong, X adalah salah satu daun Pohon Biner P */
 /* F.S. P bertambah simpulnya, dengan Y sebagai anak kiri X (jika Kiri = true), atau 
         sebagai anak Kanan X (jika Kiri = false) */

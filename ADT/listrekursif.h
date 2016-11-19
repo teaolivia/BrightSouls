@@ -11,12 +11,12 @@
 
 /* List rekursif direpresentasi dengan pointer */
 #define Nil NULL
-typedef char Infotype;
+typedef char Infotype[7];
 typedef struct tElmtList *Address;
 typedef struct tElmtList {
 	Infotype 	info;
 	Address		next;
-} ElmtList;
+} SkillList;
 
 typedef Address List;
 

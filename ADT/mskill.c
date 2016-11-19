@@ -14,7 +14,7 @@ int main() {
 	monster m;
 	statHero sh;
 	statMonster sm;
-	
+
 	/* =============== TEST SKENARIO =================== 
 	 * 
 	 * Skill should be gained each level with this order:
@@ -41,7 +41,9 @@ int main() {
 	  * ========= CODE FOR ACTIVE SKILLS ================
 	  * tp - teleport
 	  * br - blood ritual
+	  *
 	  */
+
 	  switch (code) {
 	  	case 'tp':
 	  		teleport(ch);
