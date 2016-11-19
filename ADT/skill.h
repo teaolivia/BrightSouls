@@ -34,7 +34,7 @@ void printSkill(currhero ch, BinTree P);
 
 // ========== OPERATOR TAMBAHAN =================================
 boolean isBoss(monster m);
-boolean isBeingAttacked(currhero ch, monster m);
+boolean isBeingAttacked(currhero ch, monster m, movement movv);
 
 // ========== METHOD UTAMA =======
 // skill ningkatin attack
@@ -49,7 +49,7 @@ int frenzy(currhero ch);
 // drop of youth - nambahin darah 5%
 // ide sementara nambahinnnya tiap round
 // -- ACQUIRED AT HERO LEVEL 5 (Skill Tree Level 3 (tinggi ke-2))
-int dropOfYouth(currhero ch);
+int dropOfYouth(currhero ch, movement movv);
 
 // reflect shield - kalau kita kena damage, musuh tersebut kena damage 5%
 // -- ACQUIRED AT HERO LEVEL 2 (Skill Tree Level 2 (tinggi ke-1))

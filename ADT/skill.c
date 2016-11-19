@@ -13,9 +13,11 @@ boolean isBoss(monster m) {
 		return true;
 }
 
-boolean isBeingAttacked(currhero ch, monster m) {
-	// blah blah
-	return false;
+boolean isBeingAttacked(currhero ch, monster m, movement movv) {
+	// if being attacked.
+	for (int i=0; i<10; i++) {
+		return (movv.mov[i].name[i] == attack);
+	}
 }
 
 /* ============================================================== */
@@ -48,11 +50,11 @@ int frenzy(currhero ch){
 
 // drop of youth - nambahin darah 5%
 // ide sementara nambahinnnya tiap round
-int dropOfYouth(currhero ch) {
+int dropOfYouth(currhero ch, movement movv) {
 
 	for (int i=0; i<10; i++) {
 	if (ch.status[i].level == 5) {
-		for (/* every movement made */) {
+			movv.mov[i]++;
 			ch.status[i].hp++;
 	}
 }
