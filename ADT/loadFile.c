@@ -95,7 +95,7 @@ void loadBattle(movement *M, char text[100])
 			}
 			 (*M).mov[i].name[k] = '\0';
 			 ADVKATA(text);
-			 j=0;
+			 j=1;
 			 CreateQueue(&(ElmtArray(((*M).mov[i].TabMove),j)));
 			 while ((CKata.TabKata[0]!='/') && (!EndKata))
 			{	if (CKata.TabKata[0]!='-')
@@ -106,7 +106,7 @@ void loadBattle(movement *M, char text[100])
 				}
 				ADVKATA(text);
 			}
-			NeffArray((*M).mov[i].TabMove)= j + 1;
+			NeffArray((*M).mov[i].TabMove) = j;
 			i++;
 		}
 		ADVKATA(text);
