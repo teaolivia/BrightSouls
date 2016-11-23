@@ -2,36 +2,14 @@
 /* Representasi queue dengan list berkait dengan first (HEAD) dan last (TAIL) */
 #ifndef _QUEUELIST_H
 #define _QUEUELIST_H
+
 #include "boolean.h"
 #include <stdlib.h>
+#include "allDataType.h"
 
 /* Konstanta */
-#define Nil NULL
 
 /* Deklarasi infotype */
-typedef char infotypeQueue;
-
-/* Queue dengan representasi berkait dengan pointer */
-typedef struct tElmtQueue * addressQueue;
-typedef struct tElmtQueue { 
-	infotypeQueue InfoQueue;
-	addressQueue NextQueue; 
-} ElmtQueue; 
-
-/* Type queue dengan ciri HEAD dan TAIL : */
-typedef struct { 
-	addressQueue HEAD;  /* alamat penghapusan */
-	addressQueue TAIL;  /* alamat penambahan */
-} Queue;
-
-/* Selektor */
-#define Head(Q) (Q).HEAD
-#define Tail(Q) (Q).TAIL
-#define InfoHead(Q) (Q).HEAD->InfoQueue
-#define InfoTail(Q) (Q).TAIL->InfoQueue
-#define NextQueue(P) (P)->NextQueue
-#define InfoQueue(P) (P)->InfoQueue
-
 /* Prototype manajemen memori */
 void AlokasiQueue (addressQueue *P, infotypeQueue X);
 /* I.S. Sembarang */
@@ -62,5 +40,17 @@ void DelQueue(Queue * Q, infotypeQueue * X);
 /* Pada dasarnya operasi delete first */
 /* I.S. Q tidak mungkin kosong */
 /* F.S. X = nilai elemen HEAD pd I.S., HEAD "mundur" */
+
+void PrintQueue(Queue Q);
+
+void PrintQueueP(Queue Q);
+
+void PrintQueuePP(Queue Q);
+
+void PrintQueueB(Queue Q, int move);
+
+void PrintQueueBP(Queue Q, int move);
+
+void PrintQueueBPP(Queue Q, int move);
 
 #endif

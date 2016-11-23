@@ -5,27 +5,10 @@
 #include "boolean.h"
 #include <stdlib.h>
 #include "queuelist.h"
+#include "allDataType.h"
 
 /* Deklarasi infotype */
-typedef Queue infotypeStack;
 
-/* Stack dengan representasi berkait dengan pointer */
-typedef struct tElmtStack * addressStack;
-typedef struct tElmtStack { 
-	infotypeStack InfoStack;
-	addressStack NextStack; 
-} ElmtStack; 
-
-/* Type stack dengan ciri TOP : */
-typedef struct { 
-	addressStack TOP;  /* alamat TOP: elemen puncak */
-} Stack;
-
-/* Selektor */
-#define Top(S) (S).TOP
-#define InfoTop(S) (S).TOP->InfoStack
-#define NextStack(P) (P)->NextStack
-#define InfoStack(P) (P)->InfoStack
 
 /* Prototype manajemen memori */
 void AlokasiStack (addressStack *P, infotypeStack X);

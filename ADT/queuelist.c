@@ -2,6 +2,7 @@
 /* Representasi queue dengan list berkait dengan first (HEAD) dan last (TAIL) */
 
 #include <stdlib.h>
+#include <stdio.h>
 #include "queuelist.h"
 
 /* Prototype manajemen memori */
@@ -89,3 +90,109 @@ void DelQueue(Queue * Q, infotypeQueue * X)
 	DealokasiQueue(P);
 	
 }
+
+void PrintQueue(Queue Q) {
+	char temp;
+	addressQueue P = Head(Q);
+	while (P != Nil) {
+		printf("%c ",InfoQueue(P));
+		P = NextQueue(P);
+	}
+}
+
+void PrintQueueP(Queue Q) {
+	char temp;
+	int i = 1;
+	addressQueue P = Head(Q);
+	while (P != Nil) {
+		if (i != 4) {
+			printf("%c ",InfoQueue(P));
+		} else {
+			printf("# ");
+		}
+		i++;
+		P = NextQueue(P);
+	}	
+}
+
+void PrintQueuePP(Queue Q) {
+	char temp;
+	int i = 1;
+	addressQueue P = Head(Q);
+	while (P != Nil) {
+		if (i % 2 == 1) {
+			printf("%c ",InfoQueue(P));
+		} else {
+			printf("# ");
+		}
+		i++;
+		P = NextQueue(P);
+	}		
+}
+
+void PrintQueueB(Queue Q, int move) {
+	char temp;
+	int i = 1;
+	addressQueue P = Head(Q);
+	while (P != Nil) {
+		if (i == move) {
+			printf(">%c ",InfoQueue(P));
+		} else {
+			printf("%c ",InfoQueue(P));
+		}	
+		i++;
+		P = NextQueue(P);
+	}
+}
+
+void PrintQueueBP(Queue Q, int move) {
+	char temp;
+	int i = 1;
+	int j = 1;
+	addressQueue P = Head(Q);
+	while (P != Nil) {
+		if (i != 4) {
+			if (j == move) {
+				printf(">%c ",InfoQueue(P));
+			} else {
+				printf("%c ",InfoQueue(P));
+			}
+		} else {
+			if (j == move) {
+				printf("># ",InfoQueue(P));
+			} else {
+				printf("# ",InfoQueue(P));
+			}			
+		}
+		j++;
+		i++;
+		P = NextQueue(P);
+	}
+}
+
+void PrintQueueBPP(Queue Q, int move) {
+	char temp;
+	int i = 1;
+	int j = 1;
+	addressQueue P = Head(Q);
+	while (P != Nil) {
+		if (i % 2 == 1) {
+			if (j == move) {
+				printf(">%c ",InfoQueue(P));
+			} else {
+				printf("%c ",InfoQueue(P));
+			}
+		} else {
+			if (j == move) {
+				printf("># ",InfoQueue(P));
+			} else {
+				printf("# ",InfoQueue(P));
+			}			
+		}
+		i++;
+		j++;
+		P = NextQueue(P);
+	}	
+}
+
+

@@ -1,5 +1,5 @@
-#include "loadFile.h"
 #include "stacklist.h"
+#include "allDataType.h"
 
 #ifndef _BATTLE_H_
 #define _BATTLE_H_

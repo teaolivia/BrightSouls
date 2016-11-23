@@ -80,8 +80,8 @@ void loadStatHero(hero *H, int *jum,char text[100]) {
 	}
 }
 
-void loadBattle(movement *M, char text[100])
-{	/* KAMUS */
+void loadBattle(movement *M, char text[100]) {	
+	/* KAMUS */
 	int i, j, k;
 	/* ALGORITMA */
 	i=0;

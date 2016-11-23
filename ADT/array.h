@@ -9,38 +9,9 @@
 
 #include "boolean.h"
 #include "queuelist.h"
+#include "allDataType.h"
 
 /*  Kamus Umum */
-#define IdxMaxArray 20
-/* Indeks maksimum array, sekaligus ukuran maksimum array dalam C */
-#define IdxMinArray 1
-/* Indeks minimum array */
-#define IdxUndef -999 
-/* Indeks tak terdefinisi*/
-
-/* Definisi elemen dan koleksi objek */
-typedef int IdxTypeArray;  /* type indeks */
-typedef Queue ElTypeArray;   /* type elemen tabel */
-typedef struct { 
-	ElTypeArray TI[IdxMaxArray+1]; /* memori tempat penyimpan elemen (container) */
-	int NeffArray; /* >=0, banyaknya elemen efektif */
-} Tab;
-/* Indeks yang digunakan [IdxMin..IdxMax] */
-/* Jika T adalah TabInt, cara deklarasi dan akses: */
-/* Deklarasi : T : TabInt */
-/* Maka cara akses: 
-   T.Neff  untuk mengetahui banyaknya elemen 
-   T.TI    untuk mengakses seluruh nilai elemen tabel 
-   T.TI[i] untuk mengakses elemen ke-i */
-/* Definisi : 
-  Tabel kosong: T.Neff = 0
-  Definisi elemen pertama : T.TI[i] dengan i=1 
-  Definisi elemen terakhir yang terdefinisi: T.TI[i] dengan i=T.Neff */
-  
-/* ********** SELEKTOR ********** */
-#define NeffArray(T)   (T).NeffArray
-#define Tab(T)     (T).TI
-#define ElmtArray(T,i) (T).TI[(i)]
 
 /* ********** KONSTRUKTOR ********** */
 /* Konstruktor : create tabel kosong  */
