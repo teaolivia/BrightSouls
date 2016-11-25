@@ -2,6 +2,7 @@
 #define SKILL_H
 
 #include "boolean.h"
+#include "allDataType.h"
 #include "listrek.h"
 #include "bintree.h"
 #include "map.h"
@@ -11,7 +12,7 @@
 
 // ===================== SELEKTOR ===============================
 hero h;
-currhero ch;
+currHero ch;
 monster m;
 statHero sh;
 statMonster sm;
@@ -29,43 +30,43 @@ int Level (BinTree P, infotype X);
 int Tinggi (BinTree P);
 void AddSkill (BinTree *P, infotype X, infotype Y, boolean Kiri);
 boolean SearchTree (BinTree P, infotype X);
-void printSkill(currhero ch, BinTree P); 
+void printSkill(currHero ch, BinTree P); 
 */
 
 // ========== OPERATOR TAMBAHAN =================================
 boolean isBoss(monster m);
-boolean isBeingAttacked(currhero ch, monster m, movement movv);
+boolean isBeingAttacked(currHero ch, monster m, movement movv);
 
 // ========== METHOD UTAMA =======
 // skill ningkatin attack
 // autoberserk - HP tinggal 5%, double attack
 // -- ACQUIRED AT HERO LEVEL 5 (Skill Tree Level 3 (tinggi ke-2))
-void autoberserk(currhero ch);
+void autoberserk(currHero ch);
 
 // frenzy - ningkatin defense, strength, ningkatin HP, nambahin EXP
 // -- ACQUIRED AT HERO LEVEL 3 (Skill Tree Level 3 (tinggi ke-2))
-int frenzy(currhero ch);
+int frenzy(currHero ch);
 
 // drop of youth - nambahin darah 5%
 // ide sementara nambahinnnya tiap round
 // -- ACQUIRED AT HERO LEVEL 5 (Skill Tree Level 3 (tinggi ke-2))
-int dropOfYouth(currhero ch, movement movv);
+int dropOfYouth(currHero ch, movement movv);
 
 // reflect shield - kalau kita kena damage, musuh tersebut kena damage 5%
 // -- ACQUIRED AT HERO LEVEL 2 (Skill Tree Level 2 (tinggi ke-1))
-int reflectShield(currhero ch, monster m);
+int reflectShield(currHero ch, monster m);
 
 // counter - ketika musuh nyerang dan kita block, block kita nullify attack musuh tersebut, terus musuh darahnya kurang dikit 5%
 // -- ACQUIRED AT HERO LEVEL 1 (Skill Tree Level 1 (tinggi ke-0))
-void counter(currhero ch, monster m);
+void counter(currHero ch, monster m);
 
 /* ACTIVE SKILLS */
 // TP - pindah ke map berikutnya secara random
 // -- ACQUIRED AT HERO LEVEL 4 (Skill Tree Level 3 (tinggi ke-2))
-void teleport(currhero ch, AllMap *map);
+void teleport(currHero ch, AllMap *map);
 
 // ACQUIRED AT HERO LEVEL 2
 // *masih bingung sih mending apa ya* pokoknya costs HP - Skill Tree level 2 (tinggi ke-1)
-int bloodRitual(currhero ch);
+int bloodRitual(currHero ch);
 
 #endif

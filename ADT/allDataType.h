@@ -70,7 +70,32 @@ typedef struct {
 	int NeffArray; /* >=0, banyaknya elemen efektif */
 } Tab;
 
+/* *** Definisi Type Pohon Biner *** */
+/* modul listrek untuk menyimpan skill dalam pohon */
+typedef char Infotype[7];
+typedef struct tElmtList *AddressSkill;
+typedef struct tElmtList {
+	Infotype 	info;
+	Address		next;
+} SkillList;
 
+typedef Address List;
+
+typedef struct tNode *addrNode;
+typedef struct tNode { 
+	infotype info;
+	addrNode left;
+	addrNode right;
+} Node;
+/* type infotype sesuai pada modul listrek */
+
+/* Definisi PohonBiner : */
+/* Pohon Biner kosong : P = Nil */
+typedef addrNode BinTree;
+
+
+
+/* **************** DEFINISI VARIABEL BRIGHT SOULS ****************** */
 
 typedef struct {
 	addrMap FirstMap;
@@ -166,6 +191,13 @@ typedef struct tElmtlistmap {
 #define NBrsEff(M) (M).NBrsEff
 #define NKolEff(M) (M).NKolEff
 #define ElmtMat(M,i,j) (M).Mem[(i)][(j)]
+
+#define First(L) L
+#define Info(P) (P)->info
+#define Next(P) (P)->next
+#define Akar(P) (P)->info
+#define Left(P) (P)->left
+#define Right(P) (P)->right
 
 #endif
 
