@@ -27,10 +27,10 @@ int main() {
 	 *				 /		   \
 	 *				/	  		\
 	 *		Blood Ritual(2) 	Reflect Shield(2)
-	 *		 /	   \			 /	   \
-	 * 		/		\			/		\
-	 *	Drops of	tele- 	Frenzy(3)		Auto-Berserk(5)
-	 *	Youth(5)	port(4)
+	 *		 /	   				 /	   \
+	 * 		/					/		\
+	 *	Drops of		 	Frenzy(3)		Auto-Berserk(5)
+	 *	Youth(5)	
 	 * 
 	 *
 	 * Number inside the parentheses are level hero needs to be acquired
