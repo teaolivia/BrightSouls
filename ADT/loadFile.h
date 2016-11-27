@@ -7,41 +7,41 @@
 #ifndef __LOADFILE_H_
 #define __LOADFILE_H_
 
-typedef struct {
-	int hp;
-	int str;
-	int def;
-	int exp;
-	int level;
-	char name[10];
-} statMonster;
+// typedef struct {
+// 	int hp;
+// 	int str;
+// 	int def;
+// 	int exp;
+// 	int level;
+// 	char name[10];
+// } statMonster;
 
-typedef struct {
-	statMonster Mon[10];
-	statMonster boss;
-} monster;
+// typedef struct {
+// 	statMonster Mon[10];
+// 	statMonster boss;
+// } monster;
 
-typedef struct {
-	int hp;
-	int str;
-	int def;
-	int exp;
-	int level;
-} statHero;
+// typedef struct {
+// 	int hp;
+// 	int str;
+// 	int def;
+// 	int exp;
+// 	int level;
+// } statHero;
 
-typedef struct {
-	char name[100];
-	statHero status[10];
-} hero, currhero;
+// typedef struct {
+// 	char name[100];
+// 	statHero status[10];
+// } hero, currhero;
 
-typedef struct {
-	char name[10];
-	Tab TabMove;
-} statMovement;
+// typedef struct {
+// 	char name[10];
+// 	Tab TabMove;
+// } statMovement;
 
-typedef struct {
-	statMovement mov[10];
-} movement;
+// typedef struct {
+// 	statMovement mov[10];
+// } movement;
 
 //char text[100] = nama file txt yang bakal lu load
 //int jum = jumlah monster / level hero yang ada

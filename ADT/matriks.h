@@ -11,13 +11,13 @@
 #define KolMin 1
 #define KolMax 100
 
-typedef int indeks; /* indeks baris, kolom */
-typedef char ElType; 
-typedef struct { 
-	ElType Mem[BrsMax][KolMax];
-    int NBrsEff; /* banyaknya/ukuran baris yg terdefinisi */
-	int NKolEff; /* banyaknya/ukuran kolom yg terdefinisi */
-} MATRIKS;
+// typedef int indeks; /* indeks baris, kolom */
+// typedef char ElType; 
+// typedef struct { 
+// 	ElType Mem[BrsMax][KolMax];
+//     int NBrsEff; /* banyaknya/ukuran baris yg terdefinisi */
+// 	int NKolEff; /* banyaknya/ukuran kolom yg terdefinisi */
+// } MATRIKS;
 /* NBrsEff &lt;= 1 dan NKolEff &lt;= 1 */
 /* Indeks matriks yang digunakan: [BrsMin..BrsMax][KolMin..KolMax] */
 /* Memori matriks yang dipakai selalu di "ujung kiri atas" */

@@ -1,6 +1,6 @@
 #include "skill.h"
 #include "bintree.h"
-#include "listrek.h"
+#include "listrekursif.h"
 #include "loadFile.h"
 #include "allDataType.h"
 #include "boolean.h"
@@ -33,6 +33,7 @@ void autoberserk (currHero ch){
 			if (current == ch.status.hp * 0.05) {
 				m.Mon[i].hp--;
 			}
+		}
 	}
 }
 // frenzy - ningkatin defense, strength, ningkatin HP, nambahin EXP
@@ -54,24 +55,25 @@ int frenzy(currHero ch){
 int dropOfYouth(currHero ch, movement movv) {
 
 	for (int i=0; i<10; i++) {
-	if (ch.status[i].level == 5) {
-			movv.mov[i]++;
-			ch.status.hp++;
+		if (ch.status[i].level == 5) {
+				movv.mov[i]++;
+				ch.status.hp++;
+		}
 	}
 }
-
 // reflect shield - kalau kita kena damage, musuh tersebut kena damage 5%
 int reflectShield(currHero ch, monster m) {
 	for (int i=0; i<10; i++) {
 		if (isBeingAttacked(ch,m)) {
-			return m.Mon[i].hp = (ch.status[i+1].hp - ch.status[i].hp) * 0.05;
+			return m.Mon[i].hp -= (ch.status.hp--) * 0.05;
 		}		
 	}
 }
 
 // counter - ketika musuh nyerang dan kita block, block kita nullify attack musuh tersebut
 void counter(currHero ch, monster m) {
-	if (isBeingAttacked(ch,m)) {
+	movement movv;
+	if (isBeingAttacked(ch,m,movv)) {
 		damage = nil;
 	}
 }
@@ -80,19 +82,21 @@ void counter(currHero ch, monster m) {
 /* ACTIVE SKILLS */
 // TP - pindah ke map berikutnya secara random
 // -- ACQUIRED AT HERO LEVEL 4 (Skill Tree Level 3 (tinggi ke-2))
-void teleport(currHero ch, AllMap *map) {
-	for (int i=0; i<10; i++) {
-	if (ch.status.level == 4) {
-		rand(NomorMap(*map));
-	}
-}
+// void teleport(currHero ch, AllMap *map) {
+// 	for (int i=0; i<10; i++) {
+// 	if (ch.status.level == 4) {
+// 		rand(NomorMap(*map));
+// 	}
+// }
 
 // ACQUIRED AT HERO LEVEL 2
-// add SP decrease enemy HP - Skill Tree level 2 (tinggi ke-1)
+// costs hero HP decrease enemy HP - Skill Tree level 2 (tinggi ke-1)
 int bloodRitual(currHero ch) {
 	for (int i=0; i<10; i++) {
 	if (ch.status.level == 2) {
 		ch.status.hp--;
+		m.Mon[i].hp--;
 		// blah blah blah
+		}
 	}
 }

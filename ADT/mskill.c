@@ -2,15 +2,16 @@
 
 #include "skill.h"
 #include "bintree.h"
-#include "listrek.h"
+#include "listrekursif.h"
 #include "loadFile.h"
+#include "allDataType.h"
 #include "boolean.h"
 #include <stdlib.h>
 
 int main() {
 	char code;
 	hero h;
-	currhero ch;
+	currHero ch;
 	monster m;
 	statHero sh;
 	statMonster sm;
@@ -44,13 +45,11 @@ int main() {
 	  *
 	  */
 
-	  switch (code) {
-	  	case 'tp':
-	  		teleport(ch);
-	  		break;
-	  	case 'br':
-	  		bloodRitual(ch);
-	  		break;
-	  }
+	 	scanf("%s",&code);
+	 	while (strcmp(code,"br"))
+		{
+			bloodRitual(ch);
+		}
+
 	return 0;
 }

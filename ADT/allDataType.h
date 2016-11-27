@@ -19,10 +19,12 @@ typedef int indeks; /* indeks baris, kolom */
 typedef char ElType; 
 typedef int IdxTypeArray;  /* type indeks */
 typedef char infotypeQueue;
+typedef char infotypeListRek;
 typedef struct tElmtlistmap *addrMap;
 typedef struct tElmtQueue * addressQueue;
 typedef struct tElmtStack * addressStack;
-
+typedef struct tElmtListRekursif* address;
+typedef struct tNode *addrNode;
 
 typedef struct { 
 	ElType Mem[BrsMax][KolMax];
@@ -72,18 +74,15 @@ typedef struct {
 
 /* *** Definisi Type Pohon Biner *** */
 /* modul listrek untuk menyimpan skill dalam pohon */
-typedef char Infotype[7];
-typedef struct tElmtList *AddressSkill;
-typedef struct tElmtList {
-	Infotype 	info;
-	Address		next;
-} SkillList;
+typedef address ListRek;
 
-typedef Address List;
+typedef struct tElmtListSkill {
+	infotypeListRek 	info;
+	address		next;
+} ListRek;
 
-typedef struct tNode *addrNode;
 typedef struct tNode { 
-	infotype info;
+	infotypeListRek info;
 	addrNode left;
 	addrNode right;
 } Node;
