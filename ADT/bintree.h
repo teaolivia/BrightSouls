@@ -11,27 +11,27 @@
 #include "boolean.h"
 #include "allDataType.h"
 
-/* #define Nil NULL */ /* konstanta Nil sesuai pada modul SkillListrek */
+//  #define Nil NULL konstanta Nil sesuai pada modul SkillListrek 
 
-/* *** Definisi Type Pohon Biner *** */
-/* typedef int infotypeListRek; */ /* type infotypeListRek sesuai pada modul SkillListrek */
-/* typedef struct tNode *addrNode;
-typedef struct tNode { 
-	infotypeListRek info;
-	addrNode left;
-	addrNode right;
-} Node;
+//  *** Definisi Type Pohon Biner *** 
+//  typedef int infotypeListRek; type infotypeListRek sesuai pada modul SkillListrek 
+//  typedef struct tNode *addrNode;
+// typedef struct tNode { 
+// 	infotypeListRek info;
+// 	addrNode left;
+// 	addrNode right;
+// } Node; 
 
-/* Definisi PohonBiner : */
-/* Pohon Biner kosong : P = Nil */
-//typedef addrNode BinTree;
+// Definisi PohonBiner : 
+//  Pohon Biner kosong : P = Nil 
+// typedef addrNode BinTree;
  
-/* *** PROTOTYPE *** */
+//  *** PROTOTYPE *** 
 
-/* *** Selektor *** 
-#define Akar(P) (P)->info
-#define Left(P) (P)->left
-#define Right(P) (P)->right */
+//  *** Selektor *** 
+// #define Akar(P) (P)->info
+// #define Left(P) (P)->left
+// #define Right(P) (P)->right
 
 // infotypeListRek Akar;
 // BinTree L;

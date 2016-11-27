@@ -6,7 +6,6 @@
 */
 
 #include "listrekursif.h"
-#include "allDataType.h"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -20,7 +19,7 @@ address Alokasi (infotypeListRek X) {
 	//Kamus Lokal
 	address	P;
 	//Algoritma
-	P = (address) malloc (sizeof(ElmtSkillList));
+	P = (address) malloc (sizeof(ElmtListRek));
 	if (P!=Nil) {
 		Info(P) = X;
 		Next(P) = Nil;

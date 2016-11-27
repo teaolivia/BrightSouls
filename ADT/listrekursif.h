@@ -8,23 +8,24 @@
 #ifndef LISTREKURSIF_H
 #define LISTREKURSIF_H
 #include "boolean.h"
-#include "allDataType.h"
 
 /* ListRek rekursif direpresentasi dengan pointer */
-// #define Nil NULL
-// typedef char infotypeListRek[7];
-// typedef struct tElmtSkillList *address;
-// typedef struct tElmtSkillList {
-// 	infotypeListRek 	info;
-// 	address		next;
-// } SkillSkillList; 
+#define Nil NULL
+typedef char infotypeListRek;
+typedef struct tElmtListRekursif* address;
+/* modul listrek untuk menyimpan skill dalam pohon */
 
-// typedef address ListRek;
+typedef struct tElmtListRekursif {
+	infotypeListRek 	info;
+	address		next;
+} ElmtListRek;
+
+typedef address ListRek;
 
 
-// #define First(L) L
-// #define Info(P) (P)->info
-// #define Next(P) (P)->next 
+#define First(L) L
+#define Info(P) (P)->info
+#define Next(P) (P)->next 
 
 
 

@@ -1,6 +1,8 @@
 #ifndef __ALLDATATYPE_H_
 #define __ALLDATATYPE_H_
 
+#include "listrekursif.h"
+
 #define Nil NULL
 
 #define BrsMin 1
@@ -19,11 +21,9 @@ typedef int indeks; /* indeks baris, kolom */
 typedef char ElType; 
 typedef int IdxTypeArray;  /* type indeks */
 typedef char infotypeQueue;
-typedef char infotypeListRek;
 typedef struct tElmtlistmap *addrMap;
 typedef struct tElmtQueue * addressQueue;
 typedef struct tElmtStack * addressStack;
-typedef struct tElmtListRekursif* address;
 typedef struct tNode *addrNode;
 
 typedef struct { 
@@ -73,14 +73,6 @@ typedef struct {
 } Tab;
 
 /* *** Definisi Type Pohon Biner *** */
-/* modul listrek untuk menyimpan skill dalam pohon */
-typedef address ListRek;
-
-typedef struct tElmtListSkill {
-	infotypeListRek 	info;
-	address		next;
-} ListRek;
-
 typedef struct tNode { 
 	infotypeListRek info;
 	addrNode left;

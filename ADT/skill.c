@@ -74,7 +74,8 @@ int reflectShield(currHero ch, monster m) {
 void counter(currHero ch, monster m) {
 	movement movv;
 	if (isBeingAttacked(ch,m,movv)) {
-		damage = nil;
+		// variablenya sesuain pas gabungin aja, damage berkurangnya HP
+		damage = Nil;
 	}
 }
 
@@ -96,7 +97,6 @@ int bloodRitual(currHero ch) {
 	if (ch.status.level == 2) {
 		ch.status.hp--;
 		m.Mon[i].hp--;
-		// blah blah blah
 		}
 	}
 }

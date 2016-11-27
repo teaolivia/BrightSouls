@@ -45,11 +45,11 @@ int main() {
 	  *
 	  */
 
-	 	scanf("%s",&code);
-	 	while (strcmp(code,"br"))
-		{
-			bloodRitual(ch);
-		}
+ 	scanf("%s",&code);
+ 	while (strcmp(&code,"br"))
+	{
+		bloodRitual(ch);
+	}
 
 	return 0;
 }
